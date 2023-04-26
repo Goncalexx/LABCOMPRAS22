@@ -1,0 +1,20 @@
+﻿@model ContasBancarias
+@{
+    ViewBag.Title = "Conta Confirmada";
+}
+
+
+<div class="card">
+    <div class="card-body bg-light">
+        <h1 class="card-title">@ViewBag.Title</h1>
+        <br />
+        <p><b>Nome Titular: </b>@Model.NomeTitular</p>
+        <p><b>:Saldo </b>@Model.Saldo</p>
+        <p><b>Ativa: </b>@Model.Ativa</p>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Voltar às contas</a>
+</div>

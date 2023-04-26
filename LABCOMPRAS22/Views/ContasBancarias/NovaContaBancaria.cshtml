@@ -1,0 +1,26 @@
+﻿@model ContasBancarias
+@{
+    ViewBag.Title = "Nova Conta";
+}
+
+
+<div class="w-50">
+    <form asp-action="NovaContaBancaria" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="NomeTitular" class="form-label">NomeTitular:</label>
+            <input asp-for="NomeTitular" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Saldo" class="form-label">Saldo:</label>
+            <input asp-for="Saldo" class="form-control"  />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Ativa" class="form-label">Ativa:</label>
+            <input type= "checkbox" asp-for="Ativa" class="radio" />
+        </div>
+        
+        <input type="submit" class="btn btn-primary" value="Adicionar Conta Bancaria" />
+
+    </form>
+</div>

@@ -1,0 +1,24 @@
+﻿@model Despesa
+@{
+    ViewBag.Title = "Despesa Confirmada";
+    ViewBag.SubTitulo = " despesa foi introduzida com sucesso.";
+}
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<div class="card">
+    <div class="card-body bg-light">
+        <h1 class="card-title">@ViewBag.Title</h1>
+        <h6 class="card-subtitle mb-2 ">@ViewBag.SubTitulo</h6>
+        <br />
+        <p><b>Nome despesa: </b>@Model.NomeDespesa</p>
+        <p><b>Quantidade: </b>@Model.Quantidade</p>
+        <p><b>Valor: </b>@Model.Valor</p>
+        <p><b>Categoria: </b>@Model.Categoria</p>
+        <p><b>Pago: </b>@Model.Pago</p>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Voltar às despesas</a>
+</div>

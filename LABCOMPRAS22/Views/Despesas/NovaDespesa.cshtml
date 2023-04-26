@@ -1,0 +1,43 @@
+﻿
+
+@model Despesa
+@{
+    ViewBag.Title = "Nova Despesa";
+}
+
+<div class="w-50">
+    <form asp-action="NovaDespesa" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="NomeDespesa" class="form-label">Nome despesa:</label>
+            <input asp-for="NomeDespesa" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantidade" class="form-label">Quantidade:</label>
+            <input asp-for="Quantidade" class="form-control" value="1" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Valor" class="form-label">Valor:</label>
+            <input asp-for="Valor" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Categoria" class="form-label">Categoria:</label>
+            <select asp-for="Categoria" class="form-select">
+                <option value="alimentar">Alimentar</option>
+                <option value="roupa">Roupa</option>
+                <option value="transporte">Transporte</option>
+                <option value="casa">Casa</option>
+                <option value="pessoal">Pessoal</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Pago" class="form-label">Pago:</label>
+            <select asp-for="Pago" class="form-select">
+                <option value="true">Sim</option>
+                <option value="false" selected>Não</option>
+            </select>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Adicionar Despesa" />
+
+    </form>
+</div>
