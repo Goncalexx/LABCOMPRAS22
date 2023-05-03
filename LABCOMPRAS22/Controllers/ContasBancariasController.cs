@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LABCOMPRAS22.Controllers
 {
-    public class ContasBancarias : Controller
+    public class ContasBancariasController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+          
+            List<ContaBancaria> contas = Repositorio.Contas;
+            return View(contas);
         }
 
         [HttpGet]
@@ -17,7 +19,7 @@ namespace LABCOMPRAS22.Controllers
         }
 
         [HttpPost]
-        public IActionResult NovaContaBancaria(ContasBancarias NovaContaBancaria)
+        public IActionResult NovaContaBancaria(ContaBancaria NovaContaBancaria)
         {
             if (ModelState.IsValid)
             {
@@ -28,6 +30,13 @@ namespace LABCOMPRAS22.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult NovaConta(ContaBancaria contaBancaria)
+        {
+            Repositorio.AdicionarContaBancaria(contaBancaria);
+
+            return View("ContaConfirmada" , contaBancaria);
+        }
 
     }
 }

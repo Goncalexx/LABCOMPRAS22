@@ -1,11 +1,6 @@
 ﻿@model List<ContaBancaria>
-@{
-    ViewBag.Title = "ContasBancarias";
-}
 
-
-
-<h1> Conta Bancaria </h1>
+    <h1> Conta Bancaria </h1>
 
 @foreach (ContaBancaria p in Model)
 {
@@ -17,7 +12,6 @@
         </div>
     </div>
 }
-
 <div>
-    <a asp-action="NovaContaBancaria" class="btn btn-primary"><i class="bi-plus-circle"></i> NovaContaBancaria</a>
+    <a asp-action="NovaContaBancaria">Novo Conta</a>
 </div>

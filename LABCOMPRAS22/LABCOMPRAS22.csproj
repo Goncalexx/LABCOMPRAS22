@@ -6,9 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Controllers\ContasBancariasController.cs" />
-    <Compile Remove="Models\ContaBancaria.cs" />
-  </ItemGroup>
-
 </Project>
